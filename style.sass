@@ -19,32 +19,40 @@
 
 $header-line-height: 66px
 
+$black: #00021A
+
 header
   width: 100%
-  background-color: #00021A
+  background-color: $black
   height: $header-line-height
   line-height: $header-line-height
+
+.ninehundred
+  width: 900px
+  margin: 0 auto
 
 $red: #ED112C
 $orange: #EDAA2C
 
-#logo
+#logo a
+  text-decoration: none
   font-family: 'BebasNeueRegular', Arial, sans-serif
-  letter-spacing: 0
+  letter-spacing: 1px
   font-size: 6.7em
   position: relative
   top: 5px
   color: #fff
   text-transform: uppercase
-  margin-left: 20px
   float: left
+  margin-left: -5px
 
 nav
   font-family: 'Source Sans Pro', Arial, sans-serif
-  font-size: 1.2em
+  font-weight: 200
+  font-size: 16px
   color: #fff
   float: right
-  margin-right: 40px
+  text-shadow: 0px 0px 1px rgba(255,255,255,1), 0px 0px 1px rgba(255,255,255,1), 0px 0px 1px rgba(255,255,255,1)
 
   ul
     list-style-type: none
@@ -55,18 +63,26 @@ nav
       width: 100px
       text-align: center
       float: left
-      line-height: $header-line-height - 2px
+      line-height: $header-line-height
       cursor: pointer
+      @include css3-transition(all, 0.15s)
 
       &:hover
-        border-bottom: 2px solid $red
+        // border-bottom: 2px solid $red
+        color: #000
+        background-color: #fff
 
-      i[class^="icon-"]
-        margin-top: 4px
+      // i[class^="icon-"]
+      //   margin-top: 4px
+
+div.body-wide
+  width: 100%
+  background-color: $black
 
 div#montage
   width: 900px
   height: 281px
+  margin: 0 auto
   position: relative
   overflow: hidden
 
@@ -77,11 +93,17 @@ div#montage
   .blackout
     width: 100%
     height: 100%
-    opacity: 0.5
+    opacity: 0.7
     background-color: #000
 
     position: absolute
     z-index: 6
+
+  .im-a-programmer
+    position: absolute
+    top: 60px
+    left: 345px
+    z-index: 7
 
   .main, .column1, .column2, .column3, .column4, .column5
     float: left
