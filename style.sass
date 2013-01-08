@@ -1,0 +1,116 @@
+// sass by eddie 1/7/2013
+
+@import 'sass-mixins/css3-mixins'
+@import 'sass-mixins/vspacer-num'
+
+@font-face
+  font-family: 'BebasNeueRegular'
+  src: url('fonts/BebasNeue-webfont.eot')
+  src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype')
+  src: url('fonts/BebasNeue-webfont.woff') format('woff')
+  src: url('fonts/BebasNeue-webfont.ttf') format('truetype')
+  src: url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg')
+  font-weight: normal
+  font-style: normal
+  font-style: normal
+
+.clear
+  clear: both
+
+$header-line-height: 66px
+
+header
+  width: 100%
+  background-color: #00021A
+  height: $header-line-height
+  line-height: $header-line-height
+
+$red: #ED112C
+$orange: #EDAA2C
+
+#logo
+  font-family: 'BebasNeueRegular', Arial, sans-serif
+  letter-spacing: 0
+  font-size: 6.7em
+  position: relative
+  top: 5px
+  color: #fff
+  text-transform: uppercase
+  margin-left: 20px
+  float: left
+
+nav
+  font-family: 'Source Sans Pro', Arial, sans-serif
+  font-size: 1.2em
+  color: #fff
+  float: right
+  margin-right: 40px
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+    li
+      width: 100px
+      text-align: center
+      float: left
+      line-height: $header-line-height - 2px
+      cursor: pointer
+
+      &:hover
+        border-bottom: 2px solid $red
+
+      i[class^="icon-"]
+        margin-top: 4px
+
+div#montage
+  width: 900px
+  height: 281px
+  position: relative
+  overflow: hidden
+
+  .main
+    position: relative
+    z-index: 7
+
+  .blackout
+    width: 100%
+    height: 100%
+    opacity: 0.5
+    background-color: #000
+
+    position: absolute
+    z-index: 6
+
+  .main, .column1, .column2, .column3, .column4, .column5
+    float: left
+    @include css3-box-shadow(1px, 0px, 4px, rgba(0,0,0,0.5))
+
+  .column1
+    width: 122px
+    z-index: 5
+  .column2
+    width: 122px
+    z-index: 4
+  .column3
+    width: 118px
+    z-index: 3
+  .column4
+    width: 118px
+    z-index: 2
+  .column5
+    width: 139px
+    z-index: 1
+
+  .column1 img, .column2 img, .column3 img, .column4 img, .column5 img
+    position: relative
+    @include css3-box-shadow(0px, 1px, 4px, rgba(0,0,0,0.5))
+
+    &:hover
+      z-index: 7
+
+
+
+
+
