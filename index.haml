@@ -20,26 +20,56 @@
       .clear
     %div#montage
       %img.main{:src=>"personal-site-montage/main.png"}
-      %div.blackout
       %div.column1
-        %img{:src=>"personal-site-montage/1.png", :style=>"z-index:3"}
-        %img{:src=>"personal-site-montage/2.png", :style=>"z-index:2"}
-        %img{:src=>"personal-site-montage/3.png", :style=>"z-index:1"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/1.png", :style=>"z-index:3"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/2.png", :style=>"z-index:2"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/3.png", :style=>"z-index:1"}
       %div.column2
-        %img{:src=>"personal-site-montage/4.png", :style=>"z-index:3"}
-        %img{:src=>"personal-site-montage/5.png", :style=>"z-index:2"}
-        %img{:src=>"personal-site-montage/6.png", :style=>"z-index:1"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/4.png", :style=>"z-index:3"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/5.png", :style=>"z-index:2"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/6.png", :style=>"z-index:1"}
       %div.column3
-        %img{:src=>"personal-site-montage/7.png", :style=>"z-index:2"}
-        %img{:src=>"personal-site-montage/8.png", :style=>"z-index:1"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/7.png", :style=>"z-index:2"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/8.png", :style=>"z-index:1"}
       %div.column4
-        %img{:src=>"personal-site-montage/9.png", :style=>"z-index:3"}
-        %img{:src=>"personal-site-montage/10.png", :style=>"z-index:2"}
-        %img{:src=>"personal-site-montage/11.png", :style=>"z-index:1"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/9.png", :style=>"z-index:3"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/10.png", :style=>"z-index:2"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/11.png", :style=>"z-index:1"}
       %div.column5
-        %img{:src=>"personal-site-montage/12.png", :style=>"z-index:2"}
-        %img{:src=>"personal-site-montage/13.png", :style=>"z-index:1"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/12.png", :style=>"z-index:2"}
+        %div.img
+          %div.blackout
+          %img{:src=>"personal-site-montage/13.png", :style=>"z-index:1"}
     %footer
     %script{:src=>"jquery-1.8.2.min.js"}
     %script{:src=>"bootstrap/js/bootstrap.min.js"}
     :javascript
+      $("div[class^=column] .img").hover(function() {
+        $(this).children(".blackout").hide();
+      },function() {
+        $(this).children(".blackout").show();
+      });

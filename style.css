@@ -574,12 +574,10 @@ div#montage {
   div#montage .column5 {
     width: 139px;
     z-index: 1; }
-  div#montage .column1 img, div#montage .column2 img, div#montage .column3 img, div#montage .column4 img, div#montage .column5 img {
+  div#montage .column1 .img, div#montage .column2 .img, div#montage .column3 .img, div#montage .column4 .img, div#montage .column5 .img {
     position: relative;
     -o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     -ms-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5); }
-    div#montage .column1 img:hover, div#montage .column2 img:hover, div#montage .column3 img:hover, div#montage .column4 img:hover, div#montage .column5 img:hover {
-      z-index: 7; }

@@ -26,29 +26,67 @@
     </header>
     <div id='montage'>
       <img class='main' src='personal-site-montage/main.png' />
-      <div class='blackout'></div>
       <div class='column1'>
-        <img src='personal-site-montage/1.png' style='z-index:3' />
-        <img src='personal-site-montage/2.png' style='z-index:2' />
-        <img src='personal-site-montage/3.png' style='z-index:1' />
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/1.png' style='z-index:3' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/2.png' style='z-index:2' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/3.png' style='z-index:1' />
+        </div>
       </div>
       <div class='column2'>
-        <img src='personal-site-montage/4.png' style='z-index:3' />
-        <img src='personal-site-montage/5.png' style='z-index:2' />
-        <img src='personal-site-montage/6.png' style='z-index:1' />
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/4.png' style='z-index:3' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/5.png' style='z-index:2' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/6.png' style='z-index:1' />
+        </div>
       </div>
       <div class='column3'>
-        <img src='personal-site-montage/7.png' style='z-index:2' />
-        <img src='personal-site-montage/8.png' style='z-index:1' />
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/7.png' style='z-index:2' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/8.png' style='z-index:1' />
+        </div>
       </div>
       <div class='column4'>
-        <img src='personal-site-montage/9.png' style='z-index:3' />
-        <img src='personal-site-montage/10.png' style='z-index:2' />
-        <img src='personal-site-montage/11.png' style='z-index:1' />
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/9.png' style='z-index:3' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/10.png' style='z-index:2' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/11.png' style='z-index:1' />
+        </div>
       </div>
       <div class='column5'>
-        <img src='personal-site-montage/12.png' style='z-index:2' />
-        <img src='personal-site-montage/13.png' style='z-index:1' />
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/12.png' style='z-index:2' />
+        </div>
+        <div class='img'>
+          <div class='blackout'></div>
+          <img src='personal-site-montage/13.png' style='z-index:1' />
+        </div>
       </div>
     </div>
     <footer></footer>
@@ -56,7 +94,11 @@
     <script src='bootstrap/js/bootstrap.min.js'></script>
     <script type='text/javascript'>
       //<![CDATA[
-        
+        $("div[class^=column] .img").hover(function() {
+          $(this).children(".blackout").hide();
+        },function() {
+          $(this).children(".blackout").show();
+        });
       //]]>
     </script>
   </body>
