@@ -502,24 +502,46 @@
 header {
   width: 100%;
   background-color: #00021a;
-  height: 66px;
-  line-height: 66px; }
+  height: 78px;
+  line-height: 78px; }
 
 .ninehundred {
   width: 900px;
   margin: 0 auto; }
 
-#logo a {
-  text-decoration: none;
-  font-family: "BebasNeueRegular", Arial, sans-serif;
-  letter-spacing: 1px;
-  font-size: 6.7em;
+#logo {
   position: relative;
   top: 5px;
-  color: white;
-  text-transform: uppercase;
   float: left;
+  margin-left: -5px;
+  font-size: 1em; }
+  #logo a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "BebasNeueRegular", Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 8em; }
+
+h1 {
+  position: relative;
+  top: 7px;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.2em;
   margin-left: -5px; }
+  h1 a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "BebasNeueRegular", Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 6.7em;
+    line-height: 0.7em; }
+    h1 a:hover {
+      color: white;
+      text-decoration: none; }
 
 nav {
   font-family: "Source Sans Pro", Arial, sans-serif;
@@ -536,7 +558,7 @@ nav {
       width: 100px;
       text-align: center;
       float: left;
-      line-height: 66px;
+      line-height: 78px;
       cursor: pointer;
       -o-transition: all 0.15s;
       -ms-transition: all 0.15s;
@@ -550,6 +572,11 @@ nav {
 div.body-wide {
   width: 100%;
   background-color: #00021a; }
+
+div.white-center {
+  width: 900px;
+  margin: 0 auto;
+  background-color: white; }
 
 div#montage {
   width: 900px;
@@ -601,3 +628,50 @@ div#montage {
     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5); }
+
+#skills section {
+  position: relative;
+  background-color: #00021a;
+  margin-left: 26px;
+  padding-left: 60px;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+#skills h2 {
+  width: 250px;
+  color: #00021a;
+  font-size: 2.7em;
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-align: right;
+  font-family: "BebasNeueRegular";
+  position: absolute;
+  top: 105px;
+  left: -136px;
+  text-transform: uppercase; }
+  #skills h2:first-of-type {
+    margin-top: 0; }
+#skills .language {
+  clear: both;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+  #skills .language .progress {
+    margin-bottom: 0; }
+  #skills .language .language-title, #skills .language .progress.green, #skills .language .progress.yellow, #skills .language .progress.red {
+    float: left; }
+  #skills .language .language-title {
+    width: 200px;
+    color: white;
+    font-size: 1.2em;
+    font-family: "BebasNeueRegular";
+    margin-right: 7px;
+    text-align: right; }
+  #skills .language .progress.green {
+    width: 400px; }
+  #skills .language .progress.yellow {
+    width: 270px; }
+  #skills .language .progress.red {
+    width: 140px; }

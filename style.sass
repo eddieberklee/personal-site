@@ -17,7 +17,7 @@
 .clear
   clear: both
 
-$header-line-height: 66px
+$header-line-height: 78px
 
 $black: #00021A
 
@@ -34,17 +34,40 @@ header
 $red: #ED112C
 $orange: #EDAA2C
 
-#logo a
-  text-decoration: none
-  font-family: 'BebasNeueRegular', Arial, sans-serif
-  letter-spacing: 1px
-  font-size: 6.7em
+#logo
   position: relative
   top: 5px
-  color: #fff
-  text-transform: uppercase
   float: left
   margin-left: -5px
+  font-size: 1em
+  a
+    color: #fff
+    text-transform: uppercase
+    text-decoration: none
+    font-family: 'BebasNeueRegular', Arial, sans-serif
+    letter-spacing: 1px
+    font-size: 8em
+
+h1
+  position: relative
+  top: 7px
+  margin: 0
+  padding: 0
+  font-size: 1.2em
+  line-height: 1.2em
+  margin-left: -5px
+  a
+    color: #fff
+    text-transform: uppercase
+    text-decoration: none
+    font-family: 'BebasNeueRegular', Arial, sans-serif
+    letter-spacing: 1px
+    font-size: 6.7em
+    line-height: 0.70em
+    
+    &:hover
+      color: #fff
+      text-decoration: none
 
 nav
   font-family: 'Source Sans Pro', Arial, sans-serif
@@ -78,6 +101,11 @@ nav
 div.body-wide
   width: 100%
   background-color: $black
+
+div.white-center
+  width: 900px
+  margin: 0 auto
+  background-color: #fff
 
 div#montage
   width: 900px
@@ -128,6 +156,58 @@ div#montage
   .column1 .img, .column2 .img, .column3 .img, .column4 .img, .column5 .img
     position: relative
     @include css3-box-shadow(0px, 1px, 4px, rgba(0,0,0,0.5))
+
+#skills
+  section
+    position: relative
+    background-color: $black
+    margin-left: 26px
+    padding-left: 60px
+    border-radius: 8px
+
+    padding-top: 20px
+    padding-bottom: 10px
+  h2
+    width: 250px
+    color: $black
+    font-size: 2.7em
+    @include css3-rotation(-90deg)
+    text-align: right
+    font-family: 'BebasNeueRegular'
+
+    position: absolute
+    top: 105px
+    left: -136px
+    text-transform: uppercase
+
+    &:first-of-type
+      margin-top: 0
+  .language
+    clear: both
+    margin-bottom: 10px
+    margin-left: 20px
+
+    .progress
+      margin-bottom: 0
+
+    .language-title, .progress.green, .progress.yellow, .progress.red
+      float: left
+
+    .language-title
+      width: 200px
+      color: #fff
+      font-size: 1.2em
+      font-family: 'BebasNeueRegular'
+      margin-right: 7px
+      text-align: right
+
+    .progress.green
+      width: 400px
+    .progress.yellow
+      width: 270px
+    .progress.red
+      width: 140px
+
 
 
 
