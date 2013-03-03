@@ -1,0 +1,40 @@
+- header = File.read('header.haml')
+!!! 5
+%html
+  %head
+    %link{:href=>"http://fonts.googleapis.com/css?family=Julius+Sans+One", :rel=>"stylesheet", :type=>"text/css"}
+    %link{:href=>"http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700", :rel=>"stylesheet", :type=>"text/css"}
+    %link{:href=>"bootstrap/css/bootstrap.min.css", :rel=>"stylesheet"}
+    %link{:href=>"style.css", :rel=>"stylesheet"}
+  %body
+    = Haml::Engine.new(header).render
+    .vspacer80
+
+    .body-wide
+      .ninehundred
+        %h1
+          %a#resume{:href=>"#resume"}
+            Resume
+
+    .vspacer80
+
+    .body-wide
+      .ninehundred{:style=>"text-align:center;"}
+        %img{:src=>"resume.png"}
+
+    .vspacer80
+
+    %footer
+    %script{:src=>"jquery-1.8.2.min.js"}
+    %script{:src=>"scrolltop.js"}
+    %script{:src=>"bootstrap/js/bootstrap.min.js"}
+    :javascript
+      $("div[class^=column] .img").hover(function() {
+        $(this).children(".blackout").hide();
+      },function() {
+        $(this).children(".blackout").show();
+      });
+
+
+
+

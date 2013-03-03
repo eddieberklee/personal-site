@@ -17,9 +17,9 @@
 .clear
   clear: both
 
-$header-line-height: 78px
+$header-line-height: 81px
 
-$black: #00021A
+$black: #111
 
 header
   width: 100%
@@ -33,10 +33,11 @@ header
 
 $red: #ED112C
 $orange: #EDAA2C
+$blue: #08c
 
 #logo
   position: relative
-  top: 5px
+  top: 6px
   float: left
   margin-left: -5px
   font-size: 1em
@@ -47,6 +48,8 @@ $orange: #EDAA2C
     font-family: 'BebasNeueRegular', Arial, sans-serif
     letter-spacing: 1px
     font-size: 8em
+    &:hover
+      color: $blue
 
 h1
   position: relative
@@ -62,12 +65,16 @@ h1
     text-decoration: none
     font-family: 'BebasNeueRegular', Arial, sans-serif
     letter-spacing: 1px
-    font-size: 6.7em
-    line-height: 0.70em
-    
-    &:hover
-      color: #fff
-      text-decoration: none
+    font-size: 6.6em
+    line-height: 0.73em
+    height: 70px
+    position: relative
+    top: -1px
+
+a
+  &:hover
+    color: $blue
+    text-decoration: none
 
 nav
   font-family: 'Source Sans Pro', Arial, sans-serif
@@ -76,6 +83,9 @@ nav
   color: #fff
   float: right
   text-shadow: 0px 0px 1px rgba(255,255,255,1), 0px 0px 1px rgba(255,255,255,1), 0px 0px 1px rgba(255,255,255,1)
+
+  a
+    color: #fff
 
   ul
     list-style-type: none
@@ -88,12 +98,12 @@ nav
       float: left
       line-height: $header-line-height
       cursor: pointer
-      @include css3-transition(all, 0.15s)
 
       &:hover
-        // border-bottom: 2px solid $red
-        color: #000
-        background-color: #fff
+        color: $blue
+        border-bottom: 5px solid $blue
+        // color: #000
+        // background-color: #fff
 
       // i[class^="icon-"]
       //   margin-top: 4px
@@ -101,6 +111,7 @@ nav
 div.body-wide
   width: 100%
   background-color: $black
+  overflow: hidden
 
 div.white-center
   width: 900px
@@ -163,7 +174,8 @@ div#montage
     background-color: $black
     margin-left: 26px
     padding-left: 60px
-    border-radius: 8px
+    // Rounded corners somehow just didn't fit in.
+    // border-radius: 8px
 
     padding-top: 20px
     padding-bottom: 10px
@@ -207,6 +219,26 @@ div#montage
       width: 270px
     .progress.red
       width: 140px
+
+#scrolltop
+  font-family: 'BebasNeueRegular'
+  font-size: 1.5em
+
+  $s: 50px
+  width: $s
+  height: $s
+  line-height: $s + 4px
+  text-align: center
+
+  color: #fff
+  background-color: $black
+
+  position: fixed
+  bottom: 10px
+  right: 10px
+  cursor: pointer
+
+
 
 
 

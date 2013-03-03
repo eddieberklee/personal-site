@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css' />
+    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='style.css' rel='stylesheet' />
+  </head>
+  <body>
+    <header>
+  <div class='ninehundred'>
+    <div id='logo'>
+      <a href='index.html'>
+        Eddie Lee
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <a href='index.html'>
+          <li>Home</li>
+        </a>
+        <a href='resume.html'>
+          <li>Resume</li>
+        </a>
+        <li>Code</li>
+        <li>Camera Roll</li>
+        <li>Music</li>
+      </ul>
+      <div class='clear'></div>
+    </nav>
+  </div>
+</header>
+    <div class='vspacer80'></div>
+    <div class='body-wide'>
+      <div class='ninehundred'>
+        <h1>
+          <a href='#resume' id='resume'>
+            Resume
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class='vspacer80'></div>
+    <div class='body-wide'>
+      <div class='ninehundred' style='text-align:center;'>
+        <img src='resume.png' />
+      </div>
+    </div>
+    <div class='vspacer80'></div>
+    <footer></footer>
+    <script src='jquery-1.8.2.min.js'></script>
+    <script src='scrolltop.js'></script>
+    <script src='bootstrap/js/bootstrap.min.js'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        $("div[class^=column] .img").hover(function() {
+          $(this).children(".blackout").hide();
+        },function() {
+          $(this).children(".blackout").show();
+        });
+      //]]>
+    </script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+- header = File.read('header.haml')
 !!! 5
 %html
   %head
@@ -6,19 +7,7 @@
     %link{:href=>"bootstrap/css/bootstrap.min.css", :rel=>"stylesheet"}
     %link{:href=>"style.css", :rel=>"stylesheet"}
   %body
-    %header
-      .ninehundred
-        %div#logo
-          %a{:href=>"index.html"}
-            Eddie Lee
-        %nav
-          %ul
-            %li Home
-            %li Resume
-            %li Code
-            %li Camera Roll
-            %li Music
-      .clear
+    = Haml::Engine.new(header).render
     .vspacer80
     %div.body-wide
       %div#montage
@@ -72,7 +61,7 @@
     .body-wide
       .ninehundred
         %h1
-          %a{:href=>"#"}
+          %a#skills{:href=>"#skills"}
             Skills
     .vspacer80
     .body-wide{:style=>"background-color: #fff;"}
@@ -82,58 +71,67 @@
             %h2
               Languages
             .language
-              .language-title HTML5 + Haml
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                HTML5 +
+                %a{:href=>"http://www.haml-lang.com"}
+                  Haml
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title CSS3 + Sass
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                CSS3 +
+                %a{:href=>"http://www.sass-lang.com"}
+                  Sass
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title JavaScript, jQuery
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                JavaScript +
+                %a{:href=>"http://www.jquery.com"}
+                  jQuery
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Python
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Ruby
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title PHP
-              %div.progress.progress-warning.progress-striped.yellow
+              %div.progress.progress-warning.yellow
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Perl
-              %div.progress.progress-warning.progress-striped.yellow
-                %div.bar{:style=>"width:100%"}
-              .clear
-            .language
-              .language-title C/C++
-              %div.progress.progress-warning.progress-striped.yellow
+              %div.progress.progress-warning.yellow
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Java
-              %div.progress.progress-warning.progress-striped.yellow
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title C/C++
+              %div.progress.progress-warning.yellow
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title SQL
-              %div.progress.progress-danger.progress-striped.red
+              %div.progress.progress-danger.red
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title AppleScript
-              %div.progress.progress-danger.progress-striped.red
+              %div.progress.progress-danger.red
                 %div.bar{:style=>"width:100%"}
               .clear
           .vspacer40
@@ -141,28 +139,50 @@
             %h2
               Frameworks
             .language
-              .language-title Ruby on Rails
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                %a{:href=>"http://rubyonrails.org"}
+                  Ruby on Rails
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title PHP + CodeIgniter
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                PHP +
+                %a{:href=>"http://www.codeigniter.com"}
+                  CodeIgniter
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title Python + Flask
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                %a{:href=>"http://twitter.github.com/bootstrap/"}
+                  Bootstrap
+                +
+                %a{:href=>"http://960.gs"}
+                  960.gs
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title Bootstrap + 960.gs
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                %a{:href=>"http://www.sinatrarb.com"}
+                  Sinatra
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
-              .language-title Sinatra (Ruby)
-              %div.progress.progress-success.progress-striped.green
+              .language-title
+                Python +
+                %a{:href=>"http://flask.pocoo.org/"}
+                  Flask
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                %a{:href=>"http://nodejs.org"}
+                  Node.js
+              %div.progress.progress-danger.red
                 %div.bar{:style=>"width:100%"}
               .clear
           .vspacer40
@@ -171,54 +191,64 @@
               Tools + Other
             .language
               .language-title Vim
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title MATLAB
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Photoshop
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Eclipse
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Unix (Fedora + Ubuntu + FreeBSD)
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title SVN/Git
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Dreamweaver
-              %div.progress.progress-success.progress-striped.green
+              %div.progress.progress-success.green
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Flash
-              %div.progress.progress-warning.progress-striped.yellow
+              %div.progress.progress-warning.yellow
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
               .language-title Solidworks + AutoCAD
-              %div.progress.progress-warning.progress-striped.yellow
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title InDesign
+              %div.progress.progress-danger.red
                 %div.bar{:style=>"width:100%"}
               .clear
           .clear
         .vspacer40
 
     %footer
+
+    #scrolltop
+      TOP
+
     %script{:src=>"jquery-1.8.2.min.js"}
+    %script{:src=>"scrolltop.js"}
     %script{:src=>"bootstrap/js/bootstrap.min.js"}
     :javascript
       $("div[class^=column] .img").hover(function() {
@@ -226,3 +256,5 @@
       },function() {
         $(this).children(".blackout").show();
       });
+
+
