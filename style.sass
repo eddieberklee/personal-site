@@ -24,7 +24,7 @@ $black: #111
 header
   width: 100%
   background-color: $black
-  height: $header-line-height
+  height: $header-line-height - 5px
   line-height: $header-line-height
 
 .ninehundred
@@ -33,11 +33,12 @@ header
 
 $red: #ED112C
 $orange: #EDAA2C
-$blue: #08c
+$blue: #e0252a
+//$blue: #08c
 
 #logo
   position: relative
-  top: 6px
+  top: 3px
   float: left
   margin-left: -5px
   font-size: 1em
@@ -48,12 +49,11 @@ $blue: #08c
     font-family: 'BebasNeueRegular', Arial, sans-serif
     letter-spacing: 1px
     font-size: 8em
-    &:hover
-      color: $blue
 
 h1
+  height: 75px
   position: relative
-  top: 7px
+  top: 5px
   margin: 0
   padding: 0
   font-size: 1.2em
@@ -98,15 +98,14 @@ nav
       float: left
       line-height: $header-line-height
       cursor: pointer
+      @include css3-transition(all,0.06s)
 
       &:hover
-        color: $blue
-        border-bottom: 5px solid $blue
+        color: #000
+        background-color: #fff
+        //border-bottom: 5px solid $blue
         // color: #000
         // background-color: #fff
-
-      // i[class^="icon-"]
-      //   margin-top: 4px
 
 div.body-wide
   width: 100%

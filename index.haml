@@ -7,6 +7,7 @@
     %link{:href=>"bootstrap/css/bootstrap.min.css", :rel=>"stylesheet"}
     %link{:href=>"style.css", :rel=>"stylesheet"}
   %body
+    // HAML-RENDERED
     = Haml::Engine.new(header).render
     .vspacer80
     %div.body-wide
@@ -140,21 +141,6 @@
               Frameworks
             .language
               .language-title
-                %a{:href=>"http://rubyonrails.org"}
-                  Ruby on Rails
-              %div.progress.progress-success.green
-                %div.bar{:style=>"width:100%"}
-              .clear
-            .language
-              .language-title
-                PHP +
-                %a{:href=>"http://www.codeigniter.com"}
-                  CodeIgniter
-              %div.progress.progress-success.green
-                %div.bar{:style=>"width:100%"}
-              .clear
-            .language
-              .language-title
                 %a{:href=>"http://twitter.github.com/bootstrap/"}
                   Bootstrap
                 +
@@ -165,9 +151,24 @@
               .clear
             .language
               .language-title
+                %a{:href=>"http://rubyonrails.org"}
+                  Ruby on Rails
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                PHP +
+                %a{:href=>"http://www.codeigniter.com"}
+                  CodeIgniter
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
                 %a{:href=>"http://www.sinatrarb.com"}
                   Sinatra
-              %div.progress.progress-success.green
+              %div.progress.progress-warning.yellow
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
