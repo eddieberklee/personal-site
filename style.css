@@ -511,17 +511,38 @@ header {
 
 #logo {
   position: relative;
-  top: 3px;
+  top: 2px;
   float: left;
   margin-left: -5px;
   font-size: 1em; }
   #logo a {
     color: white;
     text-transform: uppercase;
+    -o-transition: border-bottom-width 0.35s;
+    -ms-transition: border-bottom-width 0.35s;
+    -moz-transition: border-bottom-width 0.35s;
+    -webkit-transition: border-bottom-width 0.35s;
+    transition: border-bottom-width 0.35s;
     text-decoration: none;
     font-family: "BebasNeueRegular", Arial, sans-serif;
     letter-spacing: 1px;
     font-size: 8em; }
+    #logo a:hover {
+      border-bottom: 35px solid black; }
+
+#email {
+  position: absolute;
+  top: 105px;
+  left: 170px;
+  text-transform: uppercase;
+  z-index: 10;
+  color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 h1 {
   height: 75px;
@@ -573,8 +594,9 @@ nav {
       -webkit-transition: all 0.06s;
       transition: all 0.06s; }
       nav ul li:hover {
-        color: black;
-        background-color: white; }
+        background-color: black; }
+    nav ul a:hover {
+      color: white; }
 
 div.body-wide {
   width: 100%;

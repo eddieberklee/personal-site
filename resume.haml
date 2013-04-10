@@ -1,4 +1,4 @@
-- header = File.read('header.haml')
+- header = File.read('resumeheader.haml')
 !!! 5
 %html
   %head
@@ -10,17 +10,9 @@
     = Haml::Engine.new(header).render
     .vspacer80
 
-    .body-wide
-      .ninehundred
-        %h1
-          %a#resume{:href=>"#resume"}
-            Resume
-
-    .vspacer80
-
-    .body-wide
+    .body-wide{:style=>"background-color:transparent;"}
       .ninehundred{:style=>"text-align:center;"}
-        %img{:src=>"resume.png"}
+        %img{:src=>"resume.png", :style=>"margin:-20px;position:relative;left:-35px;"}
 
     .vspacer80
 

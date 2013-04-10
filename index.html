@@ -18,7 +18,11 @@
     <nav>
       <ul>
         <li>Home</li>
-        <li>Resume</li>
+        <li>
+          <a href='resume.html'>
+            Resume
+          </a>
+        </li>
         <li>Code</li>
         <li>Camera Roll</li>
         <li>Music</li>
@@ -27,6 +31,9 @@
     </nav>
   </div>
 </header>
+    <div id='email'>
+      Code. Eat. Sleep. Repeat.
+    </div>
     <div class='vspacer80'></div>
     <div class='body-wide'>
       <div id='montage'>
@@ -188,13 +195,6 @@
             <div class='language'>
               <div class='language-title'>C/C++</div>
               <div class='progress progress-warning yellow'>
-                <div class='bar' style='width:100%'></div>
-              </div>
-              <div class='clear'></div>
-            </div>
-            <div class='language'>
-              <div class='language-title'>SQL</div>
-              <div class='progress progress-danger red'>
                 <div class='bar' style='width:100%'></div>
               </div>
               <div class='clear'></div>
@@ -375,11 +375,14 @@
     <script src='bootstrap/js/bootstrap.min.js'></script>
     <script type='text/javascript'>
       //<![CDATA[
-        $("div[class^=column] .img").hover(function() {
-          $(this).children(".blackout").hide();
-        },function() {
-          $(this).children(".blackout").show();
-        });
+        $(
+          $("#logo").trigger("hover");
+          $("div[class^=column] .img").hover(function() {
+            $(this).children(".blackout").hide();
+          },function() {
+            $(this).children(".blackout").show();
+          });
+        );
       //]]>
     </script>
   </body>

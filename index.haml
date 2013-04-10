@@ -9,6 +9,8 @@
   %body
     // HAML-RENDERED
     = Haml::Engine.new(header).render
+    %div#email
+      Code. Eat. Sleep. Repeat.
     .vspacer80
     %div.body-wide
       %div#montage
@@ -123,11 +125,6 @@
             .language
               .language-title C/C++
               %div.progress.progress-warning.yellow
-                %div.bar{:style=>"width:100%"}
-              .clear
-            .language
-              .language-title SQL
-              %div.progress.progress-danger.red
                 %div.bar{:style=>"width:100%"}
               .clear
             .language
@@ -252,10 +249,13 @@
     %script{:src=>"scrolltop.js"}
     %script{:src=>"bootstrap/js/bootstrap.min.js"}
     :javascript
-      $("div[class^=column] .img").hover(function() {
-        $(this).children(".blackout").hide();
-      },function() {
-        $(this).children(".blackout").show();
-      });
+      $(
+        $("#logo").trigger("hover");
+        $("div[class^=column] .img").hover(function() {
+          $(this).children(".blackout").hide();
+        },function() {
+          $(this).children(".blackout").show();
+        });
+      );
 
 

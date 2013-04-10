@@ -38,17 +38,29 @@ $blue: #e0252a
 
 #logo
   position: relative
-  top: 3px
+  top: 2px
   float: left
   margin-left: -5px
   font-size: 1em
   a
     color: #fff
     text-transform: uppercase
+    @include css3-transition(border-bottom-width,0.35s)
     text-decoration: none
     font-family: 'BebasNeueRegular', Arial, sans-serif
     letter-spacing: 1px
     font-size: 8em
+    &:hover
+      border-bottom: 35px solid #000
+
+#email
+  position: absolute
+  top: 105px
+  left: 170px
+  text-transform: uppercase
+  z-index: 10
+  color: #fff
+  @include css3-user-select
 
 h1
   height: 75px
@@ -101,11 +113,11 @@ nav
       @include css3-transition(all,0.06s)
 
       &:hover
-        color: #000
-        background-color: #fff
-        //border-bottom: 5px solid $blue
-        // color: #000
-        // background-color: #fff
+        background-color: #000
+
+    a
+      &:hover
+        color: #fff
 
 div.body-wide
   width: 100%
