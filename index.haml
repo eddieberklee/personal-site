@@ -2,8 +2,8 @@
 !!! 5
 %html
   %head
-    %link{:href=>"http://fonts.googleapis.com/css?family=Julius+Sans+One", :rel=>"stylesheet", :type=>"text/css"}
-    %link{:href=>"http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700", :rel=>"stylesheet", :type=>"text/css"}
+    // %link{:href=>"http://fonts.googleapis.com/css?family=Julius+Sans+One", :rel=>"stylesheet", :type=>"text/css"}
+    // %link{:href=>"http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700", :rel=>"stylesheet", :type=>"text/css"}
     %link{:href=>"bootstrap/css/bootstrap.min.css", :rel=>"stylesheet"}
     %link{:href=>"style.css", :rel=>"stylesheet"}
   %body
@@ -18,57 +18,242 @@
         %img.im-a-programmer{:src=>"personal-site-montage/im_a_programmer.png"}
         %div.column1
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/1.png", :style=>"z-index:3"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/2.png", :style=>"z-index:2"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/3.png", :style=>"z-index:1"}
         %div.column2
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/4.png", :style=>"z-index:3"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/5.png", :style=>"z-index:2"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/6.png", :style=>"z-index:1"}
         %div.column3
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/7.png", :style=>"z-index:2"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/8.png", :style=>"z-index:1"}
         %div.column4
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/9.png", :style=>"z-index:3"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/10.png", :style=>"z-index:2"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/11.png", :style=>"z-index:1"}
         %div.column5
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/12.png", :style=>"z-index:2"}
           %div.img
+            %div.area
             %div.blackout
             %img{:src=>"personal-site-montage/13.png", :style=>"z-index:1"}
-    .vspacer80
-    .body-wide
+      .vspacer80{:style=>"background-color: #fff;"}
+      .body-wide
       .ninehundred
         %h1
-          %a#skills{:href=>"#skills"}
-            Skills
+          %a
+            Portfolio
     .vspacer80
+    // .skills-red
+    //   Ruby/Rails
+    // .skills-orange
+    //   Javascript
+    // .skills-yellow
+    //   CSS
+    // .skills-blue
+    //   HTML
+    // .skills-green
+    //   Python
+    // .skills-purple
+    //   Arduino
+    // .skills-pink
+    //   Photoshop
+    // .skills-grey
+    //   PHP
+    // .skills-black
+    //   Flask
     .body-wide{:style=>"background-color: #fff;"}
       .white-center
+
+        .portfolio-item
+          %a{:href=>"info-stocks.html"}
+            .blackout
+          %h2#info-stocks
+            info-stocks
+          .tags
+            .skills-green
+              Python
+            .skills-orange
+              Javascript
+          %img{:src=>"portfolio-item/info-stocks.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#mitm
+            meet-in-the-middle
+          .tags
+            .skills-black
+              Flask
+            .skills-orange
+              Javascript
+            .skills-blue
+              HTML
+            .skills-yellow
+              CSS
+          %img{:src=>"portfolio-item/mitm.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#attackontitan-notifier
+            attackontitan-notifier
+          .tags
+            .skills-green
+              Python
+          %img{:src=>"portfolio-item/attackontitan-notifier.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#byteclothing
+            byteclothing
+          .tags
+            .skills-grey
+              PHP
+            .skills-orange
+              Javascript
+            .skills-blue
+              HTML
+            .skills-yellow
+              CSS
+          %img{:src=>"portfolio-item/byteclothing.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#wooklee
+            wooklee
+          .tags
+            .skills-orange
+              Javascript
+            .skills-blue
+              HTML
+            .skills-yellow
+              CSS
+          %img{:src=>"portfolio-item/wooklee.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#xkcd-downloader
+            xkcd-downloader
+          .tags
+            .skills-green
+              Python
+          %img{:src=>"portfolio-item/no-thumbnail.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#prizm-portfolio
+            prizm-portfolio
+          .tags
+            .skills-green
+              Python
+            .skills-orange
+              Javascript
+            .skills-blue
+              HTML
+            .skills-yellow
+              CSS
+          %img{:src=>"portfolio-item/prizm-portfolio.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#tele-bears
+            "tele-bears"
+          .tags
+            .skills-purple
+              Arduino
+          %img{:src=>"portfolio-item/telebears.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#auto-doorlock
+            auto-doorlock
+          .tags
+            .skills-purple
+              Arduino
+          %img{:src=>"portfolio-item/no-thumbnail.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#crawling-dog
+            crawling-dog
+          .tags
+            .skills-purple
+              Arduino
+          %img{:src=>"portfolio-item/no-thumbnail.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#pta-organizer
+            pta-organizer
+          .tags
+            .skills-red
+              Ruby/Rails
+            .skills-orange
+              Javascript
+            .skills-blue
+              HTML
+            .skills-yellow
+              CSS
+          %img{:src=>"portfolio-item/no-thumbnail.png"}
+
+        .portfolio-item
+          %a{:href=>"#"}
+            .blackout
+          %h2#manga-reader-downloader
+            manga-reader-downloader
+          .tags
+            .skills-green
+              Python
+          %img{:src=>"portfolio-item/no-thumbnail.png"}
+
+        .clear
+
+        .vspacer40
         #skills
           %section
             %h2
@@ -249,13 +434,15 @@
     %script{:src=>"scrolltop.js"}
     %script{:src=>"bootstrap/js/bootstrap.min.js"}
     :javascript
-      $(
-        $("#logo").trigger("hover");
+      $(function() {
+        // $("#logo").trigger("hover");
         $("div[class^=column] .img").hover(function() {
-          $(this).children(".blackout").hide();
+          $(this).children(".blackout").css('opacity','0');
+          // $(this).children(".blackout").hide();
         },function() {
-          $(this).children(".blackout").show();
+          $(this).children(".blackout").css('opacity','0.7');
+          // $(this).children(".blackout").show();
         });
-      );
+      });
 
 

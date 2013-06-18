@@ -56,7 +56,7 @@ $blue: #e0252a
 #email
   position: absolute
   top: 105px
-  left: 170px
+  left: 130px
   text-transform: uppercase
   z-index: 10
   color: #fff
@@ -129,6 +129,14 @@ div.white-center
   margin: 0 auto
   background-color: #fff
 
+.blackout
+  width: 100%
+  height: 100%
+  opacity: 0.7
+  background-color: #000
+
+  position: absolute
+
 div#montage
   width: 900px
   height: 281px
@@ -141,19 +149,20 @@ div#montage
     z-index: 7
 
   .blackout
+    z-index: 8
+
+  .area
     width: 100%
     height: 100%
-    opacity: 0.7
-    background-color: #000
-
     position: absolute
-    z-index: 6
+    z-index: 10
+    cursor: pointer
 
   .im-a-programmer
     position: absolute
     top: 60px
     left: 345px
-    z-index: 7
+    z-index: 9
 
   .main, .column1, .column2, .column3, .column4, .column5
     float: left
@@ -178,6 +187,102 @@ div#montage
   .column1 .img, .column2 .img, .column3 .img, .column4 .img, .column5 .img
     position: relative
     @include css3-box-shadow(0px, 1px, 4px, rgba(0,0,0,0.5))
+
+.portfolio-item
+  width:  200px
+  height: 200px
+  position: relative
+  border: 5px solid #aaa
+  float: left
+  margin-left: 110px
+  margin-top: 80px
+
+  .blackout
+    @include css3-transition(all,0.3s)
+    opacity: 0
+
+  &:hover .blackout
+    opacity: 0.4
+  &:hover [class^=skills]
+    opacity: 1
+  &:nth-of-type(1)
+    margin-left: 0
+  &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+    margin-top: 0
+  &:nth-of-type(3n+1)
+    margin-left: 0
+  h2
+    width: 300px
+    text-align: right
+    position: absolute
+    color: #aaa
+    font-size: 1.1em
+    @include css3-rotation(-90deg)
+    text-transform: uppercase
+    bottom: 25px
+    right: 63px
+  .tags
+    width: 65px
+    position: absolute
+    right: 10px
+    top: 5px
+    z-index: 50
+    & > *
+      margin-bottom: 5px
+
+.skills-red, .skills-orange, .skills-yellow,
+.skills-blue, .skills-green, .skills-purple,
+.skills-pink, .skills-grey, .skills-black
+  color: #fff
+  width: 65px
+  height:      15px
+  line-height: 15px
+  padding: 0 3px
+  text-transform: uppercase
+  text-align: center
+  font-size: 0.7em
+  margin-bottom: 5px
+  opacity: 0
+  @include css3-transition(all,0.2s)
+  &:hover
+    opacity: 0.9
+
+.skills-red
+  background-color: #ff7344
+  $red-stroke: #ef6334
+  text-shadow: -1px -1px 0 $red-stroke, -1px 1px 0 $red-stroke, 1px -1px 0 $red-stroke, 1px 1px 0 $red-stroke
+.skills-orange
+  background-color: #ffc146
+  $orange-stroke: #efb136
+  text-shadow: -1px -1px 0 $orange-stroke, -1px 1px 0 $orange-stroke, 1px -1px 0 $orange-stroke, 1px 1px 0 $orange-stroke
+.skills-yellow
+  background-color: #fee900
+  $yellow-stroke: #eed900
+  text-shadow: -1px -1px 0 $yellow-stroke, -1px 1px 0 $yellow-stroke, 1px -1px 0 $yellow-stroke, 1px 1px 0 $yellow-stroke
+.skills-blue
+  background-color: #23c5ff
+  $blue-stroke: #13b5ef
+  text-shadow: -1px -1px 0 $blue-stroke, -1px 1px 0 $blue-stroke, 1px -1px 0 $blue-stroke, 1px 1px 0 $blue-stroke
+.skills-green
+  background-color: #8de45c
+  $green-stroke: #7dd44c
+  text-shadow: -1px -1px 0 $green-stroke, -1px 1px 0 $green-stroke, 1px -1px 0 $green-stroke, 1px 1px 0 $green-stroke
+.skills-purple
+  background-color: #9f98ec
+  $purple-stroke: #8f88dc
+  text-shadow: -1px -1px 0 $purple-stroke, -1px 1px 0 $purple-stroke, 1px -1px 0 $purple-stroke, 1px 1px 0 $purple-stroke
+.skills-pink
+  background-color: #dc9fe5
+  $pink-stroke: #cc8fd5
+  text-shadow: -1px -1px 0 $pink-stroke, -1px 1px 0 $pink-stroke, 1px -1px 0 $pink-stroke, 1px 1px 0 $pink-stroke
+.skills-grey
+  background-color: #c2c2c2
+  $grey-stroke: #b2b2b2
+  text-shadow: -1px -1px 0 $grey-stroke, -1px 1px 0 $grey-stroke, 1px -1px 0 $grey-stroke, 1px 1px 0 $grey-stroke
+.skills-black
+  background-color: #656565
+  $black-stroke: #555555
+  text-shadow: -1px -1px 0 $black-stroke, -1px 1px 0 $black-stroke, 1px -1px 0 $black-stroke, 1px 1px 0 $black-stroke
 
 #skills
   section
