@@ -1,0 +1,319 @@
+- header = File.read('header.haml')
+!!! 5
+%html
+  %head
+    %link{:href=>"http://fonts.googleapis.com/css?family=Julius+Sans+One", :rel=>"stylesheet", :type=>"text/css"}
+    %link{:href=>"http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700", :rel=>"stylesheet", :type=>"text/css"}
+    %link{:href=>"bootstrap/css/bootstrap.min.css", :rel=>"stylesheet"}
+    %link{:href=>"style.css", :rel=>"stylesheet"}
+  %body
+    // HAML-RENDERED
+    = Haml::Engine.new(header).render
+    %div#email
+      Code. Eat. Sleep. Repeat.
+    .vspacer80
+    %div.body-wide
+      %div#montage
+        %img.main{:src=>"personal-site-montage/main_red.png"}
+        %img.im-a-programmer{:src=>"personal-site-montage/im_a_programmer.png"}
+        %div.column1
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/1.png", :style=>"z-index:3"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/2.png", :style=>"z-index:2"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/3.png", :style=>"z-index:1"}
+        %div.column2
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/4.png", :style=>"z-index:3"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/5.png", :style=>"z-index:2"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/6.png", :style=>"z-index:1"}
+        %div.column3
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/7.png", :style=>"z-index:2"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/8.png", :style=>"z-index:1"}
+        %div.column4
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/9.png", :style=>"z-index:3"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/10.png", :style=>"z-index:2"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/11.png", :style=>"z-index:1"}
+        %div.column5
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/12.png", :style=>"z-index:2"}
+          %div.img
+            %div.blackout
+            %img{:src=>"personal-site-montage/13.png", :style=>"z-index:1"}
+    .vspacer80
+    .body-wide
+      .ninehundred
+        %h1
+          %a
+            Portfolio
+    .vspacer80
+    .body-wide{:style=>"background-color: #fff;"}
+      .white-center
+
+        .portfolio-item
+          %h2#info-stocks
+            info-stocks
+          %a{:href=>"#"}
+            %img{:src=>"info-stocks.png"}
+
+        .portfolio-item
+          %h2#mitm
+            meet-in-the-middle
+          %a{:href=>"#"}
+            %img{:src=>"mitm.png"}
+
+        .portfolio-item
+          %h2#attackontitan-notifier
+            attackontitan-notifier
+          %a{:href=>"#"}
+            %img{:src=>"attackontitan-notifier.png"}
+
+        .portfolio-item
+          %h2#mit
+            byteclothing
+          %a{:href=>"#"}
+            %img{:src=>"byteclothing.png"}
+
+        .portfolio-item
+          %h2#mit
+            wooklee
+          %a{:href=>"#"}
+            %img{:src=>"wooklee.png"}
+
+        .portfolio-item
+          %h2#mit
+            xkcd-downloader
+          %a{:href=>"#"}
+            %img{:src=>"no-thumbnail.png"}
+
+        .portfolio-item
+          %h2#mit
+            prizm-portfolio
+          %a{:href=>"#"}
+            %img{:src=>"prizm-portfolio.png"}
+
+        .portfolio-item
+          %h2#mit
+            "tele-bears"
+          %a{:href=>"#"}
+            %img{:src=>"telebears.png"}
+
+        .portfolio-item
+          %h2#mit
+            pta-organizer
+          %a{:href=>"#"}
+            %img{:src=>"no-thumbnail.png"}
+
+        .clear
+
+        .vspacer40
+        #skills
+          %section
+            %h2
+              Languages
+            .language
+              .language-title
+                HTML5 +
+                %a{:href=>"http://www.haml-lang.com"}
+                  Haml
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                CSS3 +
+                %a{:href=>"http://www.sass-lang.com"}
+                  Sass
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                JavaScript +
+                %a{:href=>"http://www.jquery.com"}
+                  jQuery
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Python
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Ruby
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title PHP
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Perl
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Java
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title C/C++
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title AppleScript
+              %div.progress.progress-danger.red
+                %div.bar{:style=>"width:100%"}
+              .clear
+          .vspacer40
+          %section
+            %h2
+              Frameworks
+            .language
+              .language-title
+                %a{:href=>"http://twitter.github.com/bootstrap/"}
+                  Bootstrap
+                +
+                %a{:href=>"http://960.gs"}
+                  960.gs
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                %a{:href=>"http://rubyonrails.org"}
+                  Ruby on Rails
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                PHP +
+                %a{:href=>"http://www.codeigniter.com"}
+                  CodeIgniter
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                %a{:href=>"http://www.sinatrarb.com"}
+                  Sinatra
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                Python +
+                %a{:href=>"http://flask.pocoo.org/"}
+                  Flask
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title
+                %a{:href=>"http://nodejs.org"}
+                  Node.js
+              %div.progress.progress-danger.red
+                %div.bar{:style=>"width:100%"}
+              .clear
+          .vspacer40
+          %section
+            %h2
+              Tools + Other
+            .language
+              .language-title Vim
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title MATLAB
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Photoshop
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Eclipse
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Unix (Fedora + Ubuntu + FreeBSD)
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title SVN/Git
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Dreamweaver
+              %div.progress.progress-success.green
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Flash
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title Solidworks + AutoCAD
+              %div.progress.progress-warning.yellow
+                %div.bar{:style=>"width:100%"}
+              .clear
+            .language
+              .language-title InDesign
+              %div.progress.progress-danger.red
+                %div.bar{:style=>"width:100%"}
+              .clear
+          .clear
+        .vspacer40
+
+    %footer
+
+    #scrolltop
+      TOP
+
+    %script{:src=>"jquery-1.8.2.min.js"}
+    %script{:src=>"scrolltop.js"}
+    %script{:src=>"bootstrap/js/bootstrap.min.js"}
+    :javascript
+      $(
+        $("#logo").trigger("hover");
+        $("div[class^=column] .img").hover(function() {
+          $(this).children(".blackout").hide();
+        },function() {
+          $(this).children(".blackout").show();
+        });
+      );
+
+
