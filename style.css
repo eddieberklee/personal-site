@@ -550,23 +550,20 @@ h1 {
   top: 5px;
   margin: 0;
   padding: 0;
-  font-size: 1.2em;
   line-height: 1.2em;
-  margin-left: -5px; }
-  h1 a {
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: "BebasNeueRegular", Arial, sans-serif;
-    letter-spacing: 1px;
-    font-size: 6.6em;
-    line-height: 0.73em;
-    height: 70px;
-    position: relative;
-    top: -1px; }
+  margin-left: -5px;
+  font-size: 7.65em;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "BebasNeueRegular", Arial, sans-serif;
+  letter-spacing: 1px;
+  line-height: 0.73em;
+  height: 70px;
+  position: relative;
+  top: -1px; }
 
 a:hover {
-  color: #e0252a;
   text-decoration: none; }
 
 nav {
