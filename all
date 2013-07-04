@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git add .
+git ci -am "all"
+git st
+git push website master
+git push -u origin master
+
